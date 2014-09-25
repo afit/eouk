@@ -673,7 +673,7 @@
 					</dl>
 				</div>
 				<div id=boxSupport>
-					<h2 class=boxHeader>Supporting the Complete Entrepreneur</h2>
+					<h2 class=boxHeader>Supporting the complete entrepreneur</h2>
 					<p><abbr title="Entrepreneurs&apos; Organization">EO</abbr> knows there&apos;s more to entrepreneurship than just business, which is why we support all areas of entrepreneurs&apos; lives through our EO360&deg; initiative. Entrepreneurs constantly juggle their businesses with their families, communities and personal well-being, so we created a platform for business owners to succeed in each of these areas. Join Entrepreneurs&apos; Organization members in telling your entrepreneurial story!</p>
 				</div>
 				<div id=boxSocial>
@@ -810,7 +810,7 @@
 				<div id=boxCta>
 					<a class=btn target="_blank" title="Apply for EO membership by completing the online application" href="http://www.eonetwork.org/why-join/apply-for-membership/">Sign up to find out more!</a>
 				</div>
-				<h2 class=boxHeader>Membership Benefits</h2>
+				<h2 class=boxHeader>Membership benefits</h2>
 				<div id=boxBenefits class=fltWrap>
 					<p>As a member of the <a title="Visit the Entrepreneurs' Organization" href="http://www.eonetwork.org/">Entrepreneurs&apos; Organization</a> (EO), you get access to a wide variety of tailor-made benefits designed to help you grow your business and become a better leader. Supporting the complete entrepreneur, EO offers numerous resources to help you excel in business, your family, your community and the industry within which you work. You&apos;ve made it this far as a successful business owner— let EO take you to the next level! </p>
 					<p>If you have business challenges, want to expand your <a title="Learn about Chapter Events" href="http://www.eonetwork.org/why-join/chapter-events/">business networks</a>, or are looking to connect with small and large business owners who are ready to share their experiences and best practices, look no further. As a global entrepreneurial network, EO offers you the connections, tools and resources you need to reach the next step in your entrepreneurial journey. Explore below the range of exclusive benefits of our <a title="Explore below the range of exclusive benefits of EOnetwork" href="http://www.eonetwork.org/why-join/benefits/">entrepreneurship development program</a>:</p>
@@ -826,7 +826,56 @@
 					</ul>
 					<p>If you&apos;re ready to become a member of the Entrepreneur&apos;s Organization, and join a community of <a title="Learn more about the Entrepreneurs' Organization" href="http://www.eonetwork.org/about/">top entrepreneurs</a> who&apos;ve been changing the business landscape for 25 years, <a title="Email the EO Membership Department" href="mailto:membership@eonetwork.org?subject=Membership-Interest">click here to send us an email</a>.</p>
 				</div>
+
+				<br/>
+				<h2 class=boxHeader>Member events coming up</h2>
+				<div id="events">Loading...</div>
+
+				<style>
+					.eb_event_list_item { height: 150%; }
+					.eb_event_list_title { display: inline-block; width: 550px; }
+					.eb_event_list_date { display: inline-block; width: 150px; }
+					.eb_event_list_time { display: inline-block; width: 75px; }
+					.eb_event_list_location { display: inline-block; width: 200px; }
+				</style>
+
+				<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+				<script type='text/javascript' src="http://evbdn.eventbrite.com/s3-s3/static/js/platform/Eventbrite.jquery.js"></script>
+				<script type='text/javascript'>
+				$(document).ready(function(){
+				  Eventbrite({'app_key': "WWEYB3QLD37OWUHQO3"}, function(eb){
+					eb.organizer_list_events( {'id': 3260589468, 'statuses': "live,started"}, function( response ){
+                                          var table = '<table>';
+
+                                          $.each( response['events'], function( index, value ) {
+                                              // console.log( value['event'] );
+                                              var title = value['event'].title;
+                                              var url = value['event'].url;
+                                              var parsed_date = value['event'].start_date.split(/[:-\s]/);
+                                              var venue = value['event'].venue['name'];
+
+                                              var start_date = parsed_date[2] + '-' + parsed_date[1] + '-' + parsed_date[0];
+                                              var start_time = parsed_date[3] + ':' + parsed_date[4];
+
+                                              console.log( title, url, start_date, venue );
+
+                                              table += '<tr class="eb_event_list_item"><td class="eb_event_list_title"><a href="' + url + '">' + title + '</a></td><td class="eb_event_list_date">' + start_date + '</td><td class="eb_event_list_time">' + start_time + '</td><td class="eb_event_list_location">' + venue + '</td></tr>';
+                                          });
+
+                                          table += '</table>';
+					  //$('#events').html( eb.utils.eventList( response, eb.utils.eventListRow ) ); If you let Eventbrite's JS show the table, it'll screw up the timezones in Chrome but not in Firefox.
+					  $('#events').html( table );
+					});
+				  });
+				});
+				</script>
+
+				<div>
+						<br/>
+						<p>EO members can add a feed of all events to their calendars using <a href="http://slowheart.com/eo-feed/" target="_new">this URL</a>. General instructions on how to add a feed URL to your calendar are available <a href="http://mcb.berkeley.edu/academic-programs/seminars/ical-feed-instructions">here</a>.
+				</div>
 			</div>
+
 			<div id=ft class=wrap>
 				<p class=copy>&copy; 2014 Entrepreneurs' Organization</p>
 				<ul class=navSocial>
