@@ -843,7 +843,7 @@
 					.eb_event_list_location { display: inline-block; width: 200px; }
 				</style>
 
-				<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+				<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 				<script type='text/javascript' src="http://evbdn.eventbrite.com/s3-s3/static/js/platform/Eventbrite.jquery.js"></script>
 				<script type='text/javascript'>
 				$(document).ready(function(){
@@ -856,7 +856,11 @@
                                               var title = value['event'].title;
                                               var url = value['event'].url;
                                               var parsed_date = value['event'].start_date.split(/[:-\s]/);
-                                              var venue = value['event'].venue['name'];
+
+                                              var venue = 'TBD';
+
+                                              if( value['event'].hasOwnProperty('venue') )
+                                                  venue = value['event'].venue['name'];
 
                                               var start_date = parsed_date[2] + '-' + parsed_date[1] + '-' + parsed_date[0];
                                               var start_time = parsed_date[3] + ':' + parsed_date[4];
