@@ -1,0 +1,641 @@
+/* -----------------------------------------
+   FONTS
+   Futura Light & Futura Medium @font-face
+----------------------------------------- */
+@font-face {
+  font-family: 'futura-light';
+  src: url("/fonts/futura-light-webfont.eot");
+  src: url("/fonts/futura-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/futura-light-webfont.woff") format("woff"), url("/fonts/futura-light-webfont.ttf") format("truetype"), url("/fonts/futura-light-webfont.svg#futura_lt_btlight") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'futura-light-italics';
+  src: url("/fonts/futura-light-italics-webfont.eot");
+  src: url("/fonts/futura-light-italics-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/futura-light-italics-webfont.woff") format("woff"), url("/fonts/futura-light-italics-webfont.ttf") format("truetype"), url("/fonts/futura-light-italics-webfont.svg#futura_lt_btlight_italic") format("svg");
+  font-weight: 300;
+  font-style: italics;
+}
+@font-face {
+  font-family: 'futura-medium';
+  src: url("/fonts/futura-medium-webfont.eot");
+  src: url("/fonts/futura-medium-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/futura-medium-webfont.woff") format("woff"), url("/fonts/futura-medium-webfont.ttf") format("truetype"), url("/fonts/futura-medium-webfont.svg#futura_md_btmedium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'futura-medium-italics';
+  src: url("/fonts/futura-medium-italics-webfont.eot");
+  src: url("/fonts/futura-medium-italics-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/futura-medium-italics-webfont.woff") format("woff"), url("/fonts/futura-medium-italics-webfont.ttf") format("truetype"), url("/fonts/futura-medium-italics-webfont.svg#futura_md_btmedium_italic") format("svg");
+  font-weight: 500;
+  font-style: italics;
+}
+
+        /* RESET */
+        html,body,h1,h2,h3,p,dl,dt,dd,ul,li{margin:0;padding:0;font-weight:normal;font-size:100%}
+        ul{list-style:none outside}
+        abbr[title]{cursor:help}
+
+        /* CONTENT */
+        body{
+          font-family: "futura-light", "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 1rem;
+          font-weight: 300;
+            /*font:16px/20px Arial,Helvetica, sans-serif;*/
+        vertical-align:baseline;
+        }
+
+        :link{color:#cd5806}
+        :visited{color:#863700}
+        :link:hover,:visited:hover,.cta{
+        color:#cd5806;
+        text-shadow:0 0 3px #fff;
+        -moz-transition:all .25s;-webkit-transition:all .25s;transition:all .25s;
+        }
+
+        .boxHeader{
+        margin:0 0 15px;padding:5px 0;
+        border-bottom:1px solid #a6a6a6;
+        color:#cd5806;
+        text-align:left;
+        font-weight:bold;font-size:18px;line-height:25px;
+        }
+
+        .listBulleted{
+        padding-left:1.5em;
+        list-style:disc outside;
+        }
+
+        .btn{
+        display:inline-block;
+        overflow:hidden;
+        padding:4px 19px;
+        border:1px solid #863700;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+        background:#cd5806;color:#fff;
+        cursor:pointer;
+        text-decoration:none!important;
+        white-space:nowrap;
+        }
+        .btn:hover{
+        background:#863700;color:#fff;
+        text-shadow:none;
+        }
+
+        /* SPRITE */
+        #logo,.lnkTwitter,.lnkFacebook,.lnkLinkedIn,.icXS{
+        display:inline-block;
+        overflow:hidden;
+        background:url(../img/spriteLandingEO.png) no-repeat;
+        text-indent:999em;color:transparent;text-decoration:none
+        }
+        #logo{
+        width:235px;height:60px;
+        background-position:0 0;
+        }
+
+        .lnkTwitter,.lnkFacebook,.lnkLinkedIn{
+        width:25px;height:25px;
+        }
+        #hd .lnkTwitter{background-position:0 -60px}
+        #hd .lnkFacebook{background-position:-25px -60px}
+        #hd .lnkLinkedIn{background-position:-50px -60px}
+        .lnkTwitter{background-position:-75px -60px}
+        .lnkFacebook{background-position:-100px -60px}
+        .lnkLinkedIn{background-position:-125px -60px}
+
+        .icXS{
+        width:15px;height:15px;
+        vertical-align:top;
+        }
+        .icXS.icLinkedIn{background-position:-205px -165px}
+        .icXS.icTwitter{background-position:-220px -165px}
+
+        /* LAYOUT */
+            /* Floats */
+            .fltWrap:after,.wrap:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}.fltWrap,.wrap{zoom:1}
+
+        /* SITE-WIDE LAYOUT */
+        body{
+        background:#f1f0f0;color:#000;
+        }
+            .wrap{width:98%;max-width:1000px;margin-left:auto;margin-right:auto}
+
+            #hd{
+            height:340px;
+            margin:0 0 20px;
+            background:#000 url(../img/hd3.jpg) no-repeat center top;color:#f1f0f0; background-position-y: -100px
+            }
+                #hd .wrap{position:relative}
+                    #logo{
+                    position:absolute;top:15px;left:0;
+                    }
+                    #hd .navSocial{
+                    position:absolute;top:0;right:0;
+                    width:220px;
+                    text-align:right;
+                    font-size:14px;
+                    }
+                        #hd .navSocial li{
+                        padding:10px 0 0;
+                        }
+                            #hd .navSocial li ul{
+                            display:inline-block;vertical-align:middle;
+                            width:85px;overflow:hidden;
+                            margin:-12px 0 0 12px;padding:0 0 0 14px;
+                            border-left:1px solid #f1f0f0;
+                            text-align:left;
+                            white-space:nowrap;
+                            }
+                            #hd .navSocial ul li{
+                            display:inline-block;
+                            }
+                                #hd .navSocial ul li a{vertical-align:top}
+                    #hd .pageTitle{
+                    padding:100px 0 20px 45%;
+
+                      font-family: "futura-medium", "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                      font-size: 40px;
+                      font-weight: 300;
+                    text-shadow:1px 1px 2px #583927;
+                    }
+                        #hd .pageTitle h1{font-weight:bold}
+                        #hd .pageTitle p{margin:15px 0 0;font-size:32px}
+
+            #bd{
+            }
+                #boxFacts,#boxAbout,#boxSocial,#boxWho,#boxMembers{
+                padding-bottom:30px;
+                }
+
+                #boxFacts{
+                text-align:center;
+                }
+                    #boxFacts dl{
+                    display:inline-block;
+                    width:19.6%;
+                    text-align:left;
+                    }
+                        #boxFacts dt{
+                        display:table-cell;vertical-align:middle;
+                        width:65px;height:65px;
+                        min-width:65px;min-height:65px;
+                        max-width:65px;max-height:65px;
+                        overflow:hidden;
+                        -webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;
+                        background:#cd5806;color:#f1f0f0;
+                        text-align:center;
+                        font-weight:bold;font-size:26px;line-height:25px;
+                        }
+                            #boxFacts dt .unit{display:block;font-size:9px;line-height:10px}
+                            #boxFacts dt .smaller{font-size:20px}
+                        #boxFacts dd{
+                        display:table-cell;vertical-align:middle;
+                        padding:0 15px;
+                        font-weight:bold;font-size:14px;line-height:15px;
+                        }
+
+                #boxAbout,#boxSocial{
+                float:right;
+                width:320px;
+                margin-left:20px;
+                }
+                    #boxAbout embed{
+                    display:block;
+                    margin-top:20px;
+                    margin-left:auto;margin-right:auto
+                    }
+
+                    #boxSocial{
+                    text-align:center;
+                    }
+
+                    .fb-like-box{
+                    border:1px solid #dfdfdf;background:#fff;
+                    margin-bottom:20px;
+                    }
+
+                #boxWho,#boxMembers{
+                overflow:hidden;
+                }
+                    #boxWho dl{
+                    width:90%;
+                    }
+                        #boxWho dt{
+                        font-weight:bold;font-size:18px;line-height:25px;
+                        }
+                        .titleVision:before,.titleMission:before,.titleValues:before,.titlePositioning:before,.titleProposition:before{
+                        content:'';
+                        float:left;
+                        width:35px;height:35px;overflow:hidden;
+                        margin:0 15px 0 0;
+                        background:url(../img/spriteLandingEO.png) no-repeat -200px -130px;
+                        }
+                        .titleVision:before{background-position:-200px -60px}
+                        .titleMission:before{background-position:-200px -95px}
+                        .titleValues:before{background-position:-165px -60px}
+                        .titlePositioning:before{background-position:-165px -95px}
+                        .titleProposition:before{background-position:-200px -130px}
+
+                        #boxWho dd{
+                        overflow:hidden;
+                        margin-bottom:15px;
+                        }
+
+                    #boxMembers dl{
+                    float:left;
+                    width:49%;min-height:100px;
+                    margin:0 0 20px;
+                    }
+                    #boxMembers dl:nth-child(odd){float:right}
+                        #boxMembers dt{
+                        display:block;
+                        margin:0 0 4px;
+                        font-weight:bold;font-size:18px;line-height:18px;
+                        }
+                        .member1 dt:before,
+                        .member2 dt:before,
+                        .member3 dt:before,
+                        .member4 dt:before,
+                        .member5 dt:before,
+                        .member6 dt:before,
+                        .member7 dt:before,
+                        .member8 dt:before,
+                        .member9 dt:before,
+                        .member10 dt:before,
+                        .member11 dt:before,
+                        .member12 dt:before{
+                        content:' ';
+                        float:left;
+                        width:65px;height:60px;overflow:hidden;
+                        margin:0 15px 0 0;
+                        background: url(../img/spriteLandingEO.png) no-repeat 999px 999px;
+                        }
+                        .member1 dt:before{background-position:0 -185px}
+                        .member3 dt:before{background-position:0 -255px}
+                        .member8 dt:before{background-position:0 -325px}
+                        .member10 dt:before{background-position:-0 -395px}
+
+                        .member6 dt:before{background-position:-85px -185px}
+                        .member4 dt:before{background-position:-85px -255px}
+                        .member7 dt:before{background-position:-85px -325px}
+                        .member11 dt:before{background-position:-85px -395px}
+
+                        .member5 dt:before{background-position:-170px -185px}
+                        .member2 dt:before{background-position:-170px -255px}
+                        .member9 dt:before{background-position:-170px -325px}
+                        .member12 dt:before{background-position:-170px -395px}
+
+                        #boxMembers dd{
+                        overflow:hidden;
+                        font-size:14px;line-height:15px;
+                        }
+                        #boxMembers .memberLinks{display:block;margin:5px 0 10px}
+                            #boxMembers .memberLinks a{
+                            display:inline-block;
+                            height:15px;
+                            margin-right:5px;padding:1px 3px 0;
+                            border:1px solid #dfdfdf;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;
+                            background:#dfdfdf;color:#333;
+                            font-weight:bold;font-size:11px;line-height:15px;vertical-align:middle;
+                            text-decoration:none;
+                            }
+                            #boxMembers .memberLinks a:hover{border-color:#cfcfcf;}
+
+                #boxSupport,#boxCta{
+                clear:both;
+                }
+                #boxSupport{
+                padding-bottom:50px;
+                }
+                    #boxSupport .boxHeader{margin-bottom:40px}
+                    #boxSupport .boxHeader+p:before{
+                    content:'';
+                    float:left;
+                    width:145px;height:100px;overflow:hidden;
+                    margin:-10px 30px 2em 0;
+                    background:url(../img/spriteLandingEO.png) no-repeat 0 -85px;
+                    }
+
+                #boxCta{
+                padding:20px 0 30px;
+                text-align:center;
+                }
+                    #boxCta .btn{
+                    font-weight:bold;font-size:24px;line-height:35px;
+                    }
+
+                #boxBenefitsToggler{
+                padding:5px 0;
+                color:#cd5806;
+                text-align:center;
+                font-weight:bold;font-size:18px;line-height:25px;
+                cursor:pointer;
+                }
+                    #boxBenefitsToggler .cta{color:#000}
+                    #boxBenefitsToggler .cta:after{
+                    content:'+';
+                    position:relative;top:-.15em;
+                    display:inline-block;
+                    width:14px;height:14px;
+                    margin:0 0 0 5px;
+                    border:1px solid #000;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;
+                    background:#F1F0F0;
+                    text-align:center;
+                    font-size:14px;line-height:14px;
+                    }
+                    #boxBenefitsToggler:hover .cta:after{
+                    background:#fff;
+                    }
+
+                #boxBenefits{
+                overflow:hidden;
+                padding:5px 0 0;
+                -moz-columns:2;-webkit-columns:2;columns:2;
+                -moz-transition:all 1s;-webkit-transition:all 1s;transition:all 1s;
+                }
+                    #boxBenefits p{margin-bottom:10px}
+                    #boxBenefits ul{margin-bottom:20px}
+                    #boxBenefits ul li{margin-bottom:5px}
+
+            #ft{
+            margin-top:50px;padding:15px 0;
+            border-top:1px solid #a6a6a6;color:#303030;
+            font-size:13px;
+            }
+                #ft .copy{
+                float:left;
+                width:48%;
+                }
+                #ft .navSocial{
+                float:right;
+                width:48%;
+                text-align:right;
+                }
+                    .navSocial li{display:inline-block}
+
+        /* Responsive overwrites */
+        @media all and (max-width: 980px) {
+            #hd{
+            height:auto;
+            }
+            #hd .pageTitle {
+            padding-left: 32%;
+            }
+            #hd .pageTitle h1 {
+            font-size: 36px;
+            line-height: 40px
+            }
+            #hd .pageTitle p {
+            font-size: 24px;
+            line-height: 25px
+            }
+            #boxFacts dl {
+            width: 32%;
+            }
+            #boxSupport .boxHeader + p:before {
+            margin-top:0;
+            }
+            #boxMembers dl {
+            float:none;
+            width:100%;
+            }
+        }
+        @media all and (max-width: 780px) {
+            #hd .pageTitle h1 {
+            font-size: 26px;
+            line-height: 30px
+            }
+            #boxAbout, #boxSocial {
+            float:none;
+            width:100%;
+            margin-left:0;
+            }
+            #boxSupport .boxHeader + p:before {
+            margin-top:.8em;
+            }
+            #boxBenefits {
+            -moz-columns:1;-webkit-columns:1;columns:1;
+            }
+        }
+        @media all and (max-width: 640px) {
+            #hd .pageTitle {
+            padding-left: 24%;
+            }
+            #boxFacts dl {
+            width: 48%;
+            }
+            #boxSupport .boxHeader + p:before {
+            margin-top:2em;
+            }
+        }
+        @media all and (max-width: 550px) {
+            #hd .pageTitle {
+            padding-left: 0;
+            }
+            #boxSupport .boxHeader + p:before {
+            margin-top:.8em;
+            }
+        }
+
+        /* CSS animations */
+        @-webkit-keyframes pulse {
+            0% { -webkit-transform: scale(1); }
+            50% { -webkit-transform: scale(1.1); }
+            100% { -webkit-transform: scale(1); }
+        }
+        @-moz-keyframes pulse {
+            0% { -moz-transform: scale(1); }
+            50% { -moz-transform: scale(1.1); }
+            100% { -moz-transform: scale(1); }
+        }
+        @-o-keyframes pulse {
+            0% { -o-transform: scale(1); }
+            50% { -o-transform: scale(1.1); }
+            100% { -o-transform: scale(1); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @-webkit-keyframes fadeInDownBig {
+            0% {
+            opacity: 0;
+            -webkit-transform: translateY(-2000px);
+            }
+            100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            }
+        }
+        @-moz-keyframes fadeInDownBig {
+            0% {
+            opacity: 0;
+            -moz-transform: translateY(-2000px);
+            }
+            100% {
+            opacity: 1;
+            -moz-transform: translateY(0);
+            }
+        }
+        @keyframes fadeInDownBig {
+            0% {
+            opacity: 0;
+            transform: translateY(-2000px);
+            }
+            100% {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+        @-webkit-keyframes fadeInUpBig {
+            0% {
+            opacity: 0;
+            -webkit-transform: translateY(2000px);
+            }
+            100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            }
+        }
+        @-moz-keyframes fadeInUpBig {
+            0% {
+            opacity: 0;
+            -moz-transform: translateY(2000px);
+            }
+            100% {
+            opacity: 1;
+            -moz-transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUpBig {
+            0% {
+            opacity: 0;
+            transform: translateY(2000px);
+            }
+            100% {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+
+        #hd,#bd,.btn{
+        -webkit-animation-fill-mode:both;
+        -moz-animation-fill-mode:both;
+        -ms-animation-fill-mode:both;
+        animation-fill-mode:both;
+        -webkit-animation-duration:1s;
+        -moz-animation-duration:1s;
+        -ms-animation-duration:1s;
+        animation-duration:1s;
+        }
+
+        #hd{
+        -webkit-animation-name: fadeInDownBig;
+        -moz-animation-name: fadeInDownBig;
+        animation-name: fadeInDownBig;
+        }
+        #hd .pageTitle{
+        -webkit-animation-name: fadeInDownBig;
+        -moz-animation-name: fadeInDownBig;
+        animation-name: fadeInDownBig;
+        -webkit-animation-duration:1.5s;
+        -moz-animation-duration:1.5s;
+        -ms-animation-duration:1.5s;
+        animation-duration:1.5s;
+        }
+
+        #bd{
+        -webkit-animation-name: fadeInUpBig;
+        -moz-animation-name: fadeInUpBig;
+        animation-name: fadeInUpBig;
+        }
+
+        .btn:hover{
+        -webkit-animation-name: pulse;
+        -moz-animation-name: pulse;
+        animation-name: pulse;
+        }
+
+        .navSocial a:hover{
+        transform: scale(.9,.9);
+        -ms-transform: scale(.9,.9);
+        -webkit-transform: scale(.9,.9);
+        }
+
+/* Everything below this line was added manually */
+.padded-list {
+    list-style: disc;
+}
+.padded-list li {
+    margin: 5px 0 5px 17px;
+    padding-left: 17px;
+}
+
+.list-parent {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+}
+
+.child-list li {
+    background: url(../img/small-list-bullet.png) no-repeat left center;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.white-box {
+    float: right;
+    width: 260px;
+    background-color: white;
+    padding: 30px;
+}
+
+.boxHeader--padded {
+    padding-bottom: 20px;
+}
+
+.primary-col {
+    width: 649px;
+    font-size: 18px;
+}
+
+.tick-list {
+    list-style-image: url('../img/tick.png');
+}
+
+.tick-list li {
+    padding-left: 6px;
+    margin: 15px 0 15px 16px;
+}
+
+@media all and (max-width: 980px) {
+    .white-box {
+        float: none;
+        width: 100%;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tick-list {
+        list-style: disc;
+    }
+
+
+    .tick-list li {
+        margin: 5px 0 5px 17px;
+        padding-left: 17px;
+    }
+
+    .primary-col {
+        width: 100%;
+    }
+}
